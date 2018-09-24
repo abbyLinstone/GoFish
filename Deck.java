@@ -46,12 +46,12 @@ public class Deck
     }
 
     /**
-      The getTopCard method returns the top card of 
+      The draw method returns the top card of 
       the deck.
       @return Card cardCopy The top card.
       
    */ 
-    public Card getTopCard() 
+    public Card draw() 
     {
         Card top = cards.get(0);
         cards.remove(0);
