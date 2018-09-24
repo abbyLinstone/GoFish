@@ -15,13 +15,13 @@ public class Hand
       d.toString();
       for(int i = 1; i < 8; i++)
       {
-         hand.add(d.getTopCard());
+         hand.add(d.draw());
       }
       return hand;
    }
    public ArrayList<Fish_Card> addCard(Fish_Deck d)
    {
-      hand.add(d.getTopCard());
+      hand.add(d.draw());
       return hand;
    }
    public String toString() 
