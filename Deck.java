@@ -1,3 +1,4 @@
+// Abby Linstone
 // Warm-up Project
 // CS 205
  
@@ -46,12 +47,12 @@ public class Deck
     }
 
     /**
-      The draw method returns the top card of 
+      The getTopCard method returns the top card of 
       the deck.
       @return Card cardCopy The top card.
       
    */ 
-    public Card draw() 
+    public Card getTopCard() 
     {
         Card top = cards.get(0);
         cards.remove(0);

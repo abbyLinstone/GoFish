@@ -5,33 +5,37 @@ import java.util.ArrayList;
 
 public class Hand
 {
-   private ArrayList<Fish_Card> hand;
-   private Fish_Deck d = new Fish_Deck();
+   private ArrayList<Card> hand;
+   private Deck d = new Deck();
    
-   public ArrayList<Fish_Card> newHand()
+   public ArrayList<Card> newHand()
    {
-      hand = new ArrayList<Fish_Card>();
+      hand = new ArrayList<Card>();
       d.shuffle();
       d.toString();
       for(int i = 1; i < 8; i++)
       {
-         hand.add(d.draw());
+         hand.add(d.getTopCard());
       }
       return hand;
    }
-   public ArrayList<Fish_Card> addCard(Fish_Deck d)
+   public ArrayList<Card> addCard(ArrayList<Card> h)
    {
-      hand.add(d.draw());
-      return hand;
+      h.add(d.getTopCard());
+      return h;
    }
    public String toString() 
    {
       String s = "";
       
-      for(Fish_Card c: hand){
+      for(Card c: hand){
          s += c.toString() + "  "; 
       } 
       return s;  
+   }
+   public Deck getDeck()
+   {
+      return d;
    }
 
 } 

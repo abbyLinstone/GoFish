@@ -1,45 +1,48 @@
 // Warm-up Project
-// CS 205
+// CS 210
      
 public class Card
 {
-   // Suit enumerated data type
-   public enum Suit{CLUB, SPADE, DIAMOND, HEART};   
-   // Face enumerated data type
-   public enum Face{ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING};
+   /**
+      Suit enumerated data type.
+   */
+   public enum Suit { SPADE, DIAMOND, HEART, CLUB };
+   
+
+   /**
+      Face enumerated data type.
+   */   
+   public enum Face { ACE, TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING };
    
    private  Suit suit; // The card's suit   
    private  Face face; // The card's face value
    
    /**
-      The Card constructor initializes the value of the suit and face parameters.
-      @param Suit suit To hold suit value.
-      @param String face To hold face value.
+      The Card constructor initializes the value of the suit, face.
+      @param int face to hold face value.
+      @param String suit to hold suit value.
    */   
    public Card(Suit suit, Face face)
    {
       this.suit = suit;
       this.face = face;
    }
-   // Getters
+   /**
+      The getSuit method returns color.
+   */ 
    public Suit getSuit()
    {
-     return this.suit;  
+      return suit;
    }
+
+   /**
+      The getFace method returns num.
+   */ 
    public Face getFace()
    {
-     return this.face;  
+      return face;
    }
-   
-   // Setters
-   public void setSuit(Suit suit)
-   {
-     this.suit = suit;  
-   }
-   public void setFace(Face face)
-   {
-     this.face = face;
-   }
+
    /**
       The toString method converts the object values of
       suit, and face to a text string.
@@ -49,5 +52,6 @@ public class Card
    {
       return suit + ":"  + face;    
    }
+   
 
 }
