@@ -84,6 +84,10 @@ public class Player {
         guesses[face-1] = numOfCard;
     }
 
+    public void gameOver(){
+        System.exit(0);
+    }
+
     /**
      * the method that will print each of the cards in your hand
      * @author Xuanyou Liu
@@ -115,6 +119,12 @@ public class Player {
             return true;
         } else {
             return false;
+        }
+    }
+    public void outOfCard(Deck d){
+        if(hand.size() == 0){
+            System.out.println(name+" is out of cards.");
+            hand.add(d.getTopCard());
         }
     }
 

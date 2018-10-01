@@ -75,6 +75,21 @@ public class ComputerPlayer extends Player {
         return max;
     }
 
+    @Override
+    public void outOfCard(Deck d){
+        if(d.outOfCards()){ //if the deck is out of cards
+            if(hand.size() == 0){ //and the size of the player's hand is 0
+                gameOver(); //end the game
+            }
+        }
+        else{
+            if(hand.size() == 0){
+                System.out.println("Computer is out of cards.");
+                hand.add(d.getTopCard());
+            }
+        }
+    }
+
     /*
     Author: Will
     This allows the computer to make informed decisions
